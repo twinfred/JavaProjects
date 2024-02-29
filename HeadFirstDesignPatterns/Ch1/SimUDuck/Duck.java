@@ -9,8 +9,16 @@ public abstract class Duck {
         flyBehavior.fly();
     }
 
+    public void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+
     public void performQuack() {
         quackBehavior.quack();
+    }
+
+    public void setQuackBehavior(QuackBehavior qb) {
+        quackBehavior = qb;
     }
 
     public void swim() {
