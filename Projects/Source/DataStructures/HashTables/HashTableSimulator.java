@@ -1,4 +1,4 @@
-package DataStructures.ArraysAndStrings.HashTables;
+package DataStructures.HashTables;
 
 public class HashTableSimulator {
     public static void main(String[] args) {

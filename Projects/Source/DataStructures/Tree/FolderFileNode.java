@@ -1,4 +1,4 @@
-package DataStructures.ArraysAndStrings.Tree;
+package DataStructures.Tree;
 
 import java.util.HashMap;
 import java.util.Map;

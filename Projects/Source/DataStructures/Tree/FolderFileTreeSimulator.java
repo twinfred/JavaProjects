@@ -1,4 +1,4 @@
-package DataStructures.ArraysAndStrings.Tree;
+package DataStructures.Tree;
 
 public class FolderFileTreeSimulator {
     public static void main(String[] args) {

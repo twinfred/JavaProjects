@@ -1,4 +1,4 @@
-package DataStructures.ArraysAndStrings.HashTables;
+package DataStructures.HashTables;
 
 public class HashMap {
     private Node[] hashMap = new Node[5];

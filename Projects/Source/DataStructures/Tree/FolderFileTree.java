@@ -1,4 +1,4 @@
-package DataStructures.ArraysAndStrings.Tree;
+package DataStructures.Tree;
 
 public class FolderFileTree {
     private FolderFileNode root;
