@@ -1,8 +1,6 @@
 package DataStructures.Graphs.ShortestPath;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ShortestPath {
     Integer[][] gameMap = {
@@ -15,23 +13,18 @@ public class ShortestPath {
         { 0, 0, 0, 0, 0, 0, 0, 2 },
     };
     public static void main(String[] args) {
-        List<LocationNode> nodesToExploreNext = new ArrayList<>();
-        List<LocationNode> visited = new ArrayList<>();
+        Queue<LocationNode> nodesToExploreNext = new LinkedList<>();
+        HashSet<LocationNode> visitedNodes = new HashSet<>();
 
-        visited.add(new LocationNode(0, 0));
+        visitedNodes.add(new LocationNode(0, 0));
         nodesToExploreNext.add(new LocationNode(0,1));
         nodesToExploreNext.add(new LocationNode(1,0));
 
         while (!nodesToExploreNext.isEmpty()) {
-            LocationNode node = nodesToExploreNext.removeFirst();
+            LocationNode node = nodesToExploreNext.poll();
 
-            if (!visited.contains(node)) {
-                node.setPath(visited);
-                visited.add(node);
-            }
-
-            if (node.getLocation() == Arrays.asList(7,7)) {
-                System.out.println("Shortest path found in " + node.getPathLength() + " steps.");
+            if (visitedNodes.contains(node)) {
+                System.out.println("Node found");
             }
         }
     }

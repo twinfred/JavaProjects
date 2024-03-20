@@ -1,25 +1,23 @@
 package DataStructures.Graphs.ShortestPath;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class LocationNode {
-    List<Integer> location = new ArrayList<>();
-    List<LocationNode> previousNodes;
+    private final Integer row;
+    private final Integer column;
+    List<LocationNode> pathTaken;
     public LocationNode(Integer rowIdx, Integer colIdx) {
-        location.add(rowIdx);
-        location.add(colIdx);
+        this.row = rowIdx;
+        this.column = colIdx;
     }
 
-    public List<Integer> getLocation() {
-        return location;
-    }
-
-    public void setPath(List<LocationNode> path) {
-        previousNodes = path;
+    public void setPathTaken(List<LocationNode> path) {
+        pathTaken = path;
     }
 
     public Integer getPathLength() {
-        return previousNodes.size();
+        return pathTaken.size();
     }
 }
